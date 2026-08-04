@@ -23,7 +23,7 @@ jobs:
 
     - name: Build exe
       run: |
-        pyinstaller --onefile --windowed --name SpeedrunTimer main.py
+        pyinstaller --windowed --name SpeedrunTimer main.py
 
     - name: Upload exe
       uses: actions/upload-artifact@v4
