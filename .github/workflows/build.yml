@@ -21,12 +21,12 @@ jobs:
         pip install pyinstaller
         pip install pynput
 
-    - name: Build exe
+    - name: Build exe folder
       run: |
         pyinstaller --windowed --name SpeedrunTimer main.py
 
-    - name: Upload exe
+    - name: Upload build folder
       uses: actions/upload-artifact@v4
       with:
         name: SpeedrunTimer
-        path: dist/SpeedrunTimer.exe
+        path: dist/SpeedrunTimer/
